@@ -1,6 +1,6 @@
 <div class="contents">
   <div class="content">
-    <% @posts.each do |post|%>
+    <% @posts.each do |post| %>
       <%= render partial: "post", locals: { post: post } %>
     <% end %>
     <%= paginate(@posts) %>

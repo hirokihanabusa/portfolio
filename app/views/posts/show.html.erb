@@ -1,0 +1,38 @@
+<div class="contents">
+  <div class="content">
+    <div class="post-name">
+      <p class="warehouse-name"><%= @post.warehouse_name %></p>
+    </div>
+    <div class="date-contributer">
+      <div class="post-date">
+        <p class="post-day">投稿日：<%= l @post.post_date, format: :short %></p>
+      </div>
+      <div class="post-contributer">
+        <p class="nickname">投稿者：<a href="/users/<%= @post.user_id %>"><%= @post.user.nickname %></a></p>
+      </div>
+    </div>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+      <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, class: :edit %>
+      <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: :delete, data: { confirm: "本当に削除しますか?" }%>
+    <% end %>
+  </div>
+  <div class="container"> 
+    <% if current_user %>
+      <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: :comment) do %>
+        <textarea cols="45" name="text" placeholder="コメントする" rows="3" autofocus="true" class="comment-form"></textarea>
+        <%= button_to "送信", {controller: 'posts', action: 'show'}, { method: :get, data: { confirm: 'コメントを送信しますか？' }, class: "btn_mouth" } %>
+      <% end %>
+    <% end %>
+    <div class="comments">
+      <h4>【口コミ一覧】</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

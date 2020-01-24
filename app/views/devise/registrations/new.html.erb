@@ -1,0 +1,55 @@
+<div class="contents">
+  <div class="sign_up">
+    <h2>Sign up</h2>
+    <p style="font-size: 14px;">新規アカウントの作成</p>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <div class="field-label">
+        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+      </div>
+      <div>
+        <%= f.text_field :nickname, placeholder:" 最大6文字まで(必須)", :size=>"45", autofocus: true, maxlength: "6" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">
+        <%= f.label :email %><br />
+      </div>
+      <div>
+        <%= f.email_field :email, :size=>"45", placeholder:" メールアドレス", autofocus: true, autocomplete: "email" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+      </div>
+      <div>
+        <%= f.password_field :password, :size=>"45", placeholder:" パスワード(6文字以上)", autocomplete: "new-password" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">
+        <%= f.label :password_confirmation %><br />
+      </div>
+      <div>
+        <%= f.password_field :password_confirmation, :size=>"45", placeholder:" パスワード確認", autocomplete: "new-password" %>
+      </div>
+    </div>
+
+    <div class="actions_sign">
+      <%= f.submit "Sign up", data: { confirm: "アカウントを登録しますか?"} %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>

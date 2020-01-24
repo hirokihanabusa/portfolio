@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-logo">
+          <h1 class="title"><a class="title-logo", href="/">倉庫口コミ集</a></h1>
+        </div>
+        <div class="navi">
+          <% if user_signed_in? %>
+            <div class="user_nav">
+              <ul class="menu">
+                <li class="menu-list"><a class="login" href="/posts/new">投稿する</a></li>
+                <li class="menu-list"><a class="login" href="/posts/search">倉庫を検索</a></li>
+                <li class="menu-list"><a class="login" href="/users/<%= current_user.id %>">マイページ</a></li>
+                <li class="menu-list"><%= link_to "アカウント編集", edit_user_registration_path, method: :get, class: "update" %></li>
+                <li class="menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login", data: { confirm: "ログアウトしますか?" } %></li>
+              </ul>
+            </div>
+            <% else %>
+            <div class="user_nav">
+              <ul class="menu">
+                <li class="menu-list"><a class="logoff" href="/posts/search">倉庫を検索</a></li>
+                <li class="menu-list"><%= link_to "ログイン", new_user_session_path, class: 'post', class: "logoff" %></li>
+                <li class="menu-list"><%= link_to "新規登録", new_user_registration_path, class: 'post', class: "logoff" %></li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p class="footer-logo">
+        © 2020 WAREHOUSE MANAGEMENT CO., LTD. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

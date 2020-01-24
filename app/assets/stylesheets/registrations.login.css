@@ -1,0 +1,21 @@
+.log_in {
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  padding: 1px;
+  letter-spacing: 1px;
+}
+
+input[type="password"] {
+  padding: 1px;
+  letter-spacing: 1px;
+}
+
+.field-label {
+  padding: 10px 0;
+}
+
+.field_remember {
+  padding: 10px 0;
+}

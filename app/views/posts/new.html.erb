@@ -1,0 +1,18 @@
+<div class="contents">
+  <div class="content">
+    <%= form_for(@post) do |f| %>
+      <h3 class="posting">【倉庫情報を投稿】</h3>
+      <div class="facility">
+        <%= f.label :倉庫名：, {class: "facility-name"} %>
+        <%= f.text_field :warehouse_name, :size=>"45", placeholder:" 倉庫名を入力(必須)",autofocus: true %>
+      </div>
+      <div>
+        <%= f.label :投稿日：, {class: "post_day"} %>
+        <%= f.date_field :post_date %>
+      </div>
+      <div>
+        <%= f.submit "送信", :class=>"btn_post", data: { confirm: "投稿しますか?"} %>
+      </div>
+    <% end %>
+  </div>
+</div>

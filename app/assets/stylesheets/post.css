@@ -1,0 +1,50 @@
+.contents {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 3px;
+  min-height: 300px;
+}
+
+.info {
+  padding-bottom: 40px;
+}
+
+.warehouse-name {
+  font-size: 24px;
+  border-bottom: 1px solid rgb(155, 144, 144);
+}
+
+.date-contributer {
+  display: flex;
+}
+
+.nickname {
+  font-size: 18px;
+}
+
+.post-date {
+  padding-right: 70px;
+}
+
+.post-day {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.review {
+  padding: 10px 16px 10px 16px;
+  border: 1px solid #00000047;
+  border-radius: 6px;
+}
+
+.edit {
+  padding: 10px 16px;
+  border: 1px solid #00000047;
+  border-radius: 6px;
+}
+
+.delete {
+  padding: 10px 16px;
+  border: 1px solid #00000047;
+  border-radius: 6px;
+}

@@ -1,0 +1,29 @@
+<div class="contents">
+  <div class="content">
+    <div class="post-name">
+      <p class="warehouse-name"><%= @post.warehouse_name %></p>
+    </div>
+    <div class="date-contributer">
+      <div class="post-date">
+        <p class="post-day">投稿日：<%= l @post.post_date, format: :short %></p>
+      </div>
+      <div class="post-contributer">
+        <p class="nickname">投稿者：<a href="/users/<%= @post.user_id %>"><%= @post.user.nickname %></a></p>
+      </div>
+    </div>
+    <%= form_for(@post) do |f| %>
+      <h3 class="editing">【倉庫情報の編集】</h3>
+      <div class="facility">
+        <%= f.label :倉庫名：, {class: "facility-name"} %>
+        <%= f.text_field :warehouse_name, :size=>"45", placeholder:" 倉庫名を入力(必須)", autofocus: true %>
+      </div>
+      <div>
+        <%= f.label :投稿日：, {class: "post_day"} %>
+        <%= f.date_field :post_date %>
+      </div>
+      <div>
+        <%= f.submit "送信", :class=>"btn_edit", data: { confirm: "情報を更新しますか?" } %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  background-color: #f5f7f9;
+}
+
+header {
+  height: 60px;
+  background-color: #2a3849;
+}
+
+.title {
+  padding-left: 170px;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.title-logo {
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list {
+  position: relative;
+  bottom: 40px;
+  padding-right: 40px;
+}
+
+.login {
+  color: #fff;
+}
+
+.logoff {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}

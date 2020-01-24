@@ -1,0 +1,20 @@
+<div class="info">
+  <div class="post-name">
+    <p class="warehouse-name"><%= post.warehouse_name %></p>
+  </div>
+  <div class="date-contributer">
+    <div class="post-date">
+      <p class="post-day">投稿日：<%= l post.post_date, format: :short %></p>
+    </div>
+    <div class="post-contributer">
+      <p class="nickname">投稿者：<a href="/users/<%= post.user_id %>"><%= post.user.nickname %></a></p>
+    </div>
+  </div>
+  <div>
+    <%= link_to '口コミを表示', "/posts/#{post.id}", method: :get, class: :review %>
+    <% if user_signed_in? && current_user.id == post.user_id %>
+    <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: :edit %>
+    <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: :delete, data: { confirm: "本当に削除しますか?" } %>
+    <% end %>
+  </div>
+</div>

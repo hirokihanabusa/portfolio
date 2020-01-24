@@ -1,0 +1,33 @@
+.editing {
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+}
+
+.update {
+  color: #ffffff;
+}
+
+.actions_update {
+  padding: 10px 0;
+}
+
+input[type="text"] {
+  padding: 1px;
+  letter-spacing: 1px;
+}
+
+.post_day {
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+input[type="date"] {
+  padding: 1px;
+  width: 416px;
+  letter-spacing: 1px;
+}
+
+.btn_edit {
+  width: 5%;
+  margin: 20px 0 0 12px;
+}

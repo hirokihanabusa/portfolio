@@ -1,7 +1,5 @@
 ## Name
 Warehouse Review
-====
-This tool can check the reviews of the warehouse.
 
 ## Description
 This app can read reviews. You can write a review if you log in.
@@ -21,7 +19,7 @@ You can know the reputation of the warehouse.
     - Ruby, Ruby on Rails  
 
 ## Functions implemented
-Login, Search, Edit, Delete, Mypage, Update, Postlist,　PostCreate
+Login, Search, Edit, Delete, Mypage, Update, Postlist,PostCreate
 
 ## Login user ID and password and Nickname
 - Login user ID

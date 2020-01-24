@@ -6,7 +6,6 @@ This app can read reviews. You can write a review if you log in.
 
 ## Demo
 You can know the reputation of the warehouse.
-
 [Warehouse Review](https://gyazo.com/8d8850cc6e06f6d42bf5cca9ebb6c609)
 
 ## Requirement

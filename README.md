@@ -34,7 +34,7 @@ Login, Search, Edit, Delete, Mypage, Update, Postlist,PostCreate
 ```bash
 git clone https://github.com/hirokihanabusa/portfolio.git
 cd portfolio
-ruby demo.py
+rails s
 ```
 
 ## Author

@@ -20,7 +20,7 @@
     <% if current_user %>
       <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: :comment) do %>
         <textarea cols="45" name="text" placeholder="コメントする" rows="3" autofocus="true" class="comment-form"></textarea>
-        <%= button_to "送信", {controller: 'posts', action: 'show'}, { method: :get, data: { confirm: 'コメントを送信しますか？' }, class: "btn_mouth" } %>
+        <%= button_to "送信", {controller: 'posts', action: 'show'}, { method: :get, class: "btn_mouth" } %>
       <% end %>
     <% end %>
     <div class="comments">
@@ -31,7 +31,7 @@
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
             <% if user_signed_in? && current_user == comment.user %>
-            <%= link_to '削除', post_comment_path(comment.post.id, comment.id), method: :delete, class: :comment_delete, data: { confirm: "本当に削除しますか?" } %>
+            <%= link_to '削除', post_comment_path(comment.post.id, comment.id), method: :delete, class: :comment_delete, data: { confirm: "口コミを削除しますか?" } %>
             <% end %>
           </div>
         <% end %>

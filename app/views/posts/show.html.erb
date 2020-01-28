@@ -13,7 +13,7 @@
     </div>
     <% if user_signed_in? && current_user.id == @post.user_id %>
       <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, class: :edit %>
-      <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: :delete, data: { confirm: "本当に削除しますか?" }%>
+      <%= link_to '削除', "/posts/#{@post.id}", method: :delete, class: :delete, data: { confirm: "本当に削除しますか?" } %>
     <% end %>
   </div>
   <div class="container"> 
@@ -27,10 +27,13 @@
       <h4>【口コミ一覧】</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
-          <p>
+          <div>
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
-          </p>
+            <% if user_signed_in? && current_user == comment.user %>
+            <%= link_to '削除', post_comment_path(comment.post.id, comment.id), method: :delete, class: :comment_delete, data: { confirm: "本当に削除しますか?" } %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
     </div>

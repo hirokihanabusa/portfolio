@@ -7,9 +7,19 @@
   margin: 13px 0; 
   padding-bottom: 10px;
 }
+
 .facility-name {
   font-size: 18px;
   margin-left: 12px;
+}
+
+.new-address {
+  padding-top: 22px;
+  margin-left: 12px;
+}
+
+.address-word {
+  font-size: 18px;
 }
 
 .btn_post {

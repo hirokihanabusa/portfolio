@@ -18,6 +18,9 @@
             <p class="nickname">投稿者：<a href="/users/<%= post.user_id %>"><%= post.user.nickname %></a></p>
           </div>
         </div>
+        <div class="address"> 
+          <p class="warehouse_address">所在地：<%= post.address %></p>
+        </div>
         <div>
           <%= link_to '口コミを表示', "/posts/#{post.id}", method: :get, class: :review %>
           <% if user_signed_in? && current_user.id == post.user_id %>

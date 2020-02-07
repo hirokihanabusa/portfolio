@@ -4,6 +4,7 @@ class Post < ApplicationRecord
 
   validates :warehouse_name, presence: true
   validates :post_date, presence: true
+  validates :address, presence: true
 
 end
 

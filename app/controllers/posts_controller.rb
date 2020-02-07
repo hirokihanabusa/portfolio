@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(warehouse_name: post_params[:warehouse_name], post_date: post_params[:post_date], user_id: current_user.id)
+    @post = Post.create(warehouse_name: post_params[:warehouse_name], post_date: post_params[:post_date], address: post_params[:address], user_id: current_user.id)
     redirect_to action: :new unless @post.save
   end
 
@@ -18,10 +18,12 @@ class PostsController < ApplicationController
     if post.user_id == current_user.id
       post.destroy
     end
+    redirect_to action: :index
   end
 
   def edit
     @post = Post.find(params[:id])
+    
   end
 
   def show
@@ -44,7 +46,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:warehouse_name, :post_date)
+    params.require(:post).permit(:warehouse_name, :post_date, :address)
   end
 
   def move_to_index

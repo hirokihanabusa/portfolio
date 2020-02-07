@@ -2,16 +2,16 @@
   width: 1100px;
   margin: 0 auto;
   margin-top: 3px;
-  min-height: 300px;
+  min-height: 350px;
 }
 
 .info {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .warehouse-name {
   font-size: 24px;
-  border-bottom: 1px solid rgb(155, 144, 144);
+  border-bottom: 2px solid rgb(155, 144, 144);
 }
 
 .date-contributer {
@@ -20,6 +20,19 @@
 
 .nickname {
   font-size: 18px;
+}
+
+.address {
+  position: relative;
+  bottom: 10px;
+}
+
+.warehouse_address {
+  font-size: 18px;
+}
+
+.info-edit {
+  margin-top: 10px;
 }
 
 .post-date {

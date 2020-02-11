@@ -7,4 +7,3 @@ class Post < ApplicationRecord
   validates :address, presence: true
 
 end
-

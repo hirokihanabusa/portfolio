@@ -1,0 +1,7 @@
+<div>
+  <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+  <%= comment.text %>
+  <% if user_signed_in? && current_user == comment.user %>
+  <%= link_to '削除', post_comment_path(comment.post.id, comment.id), method: :delete, class: :comment_delete, data: { confirm: "口コミを削除しますか?" } %>
+  <% end %>
+</div>

@@ -4,7 +4,7 @@
       <h3 class="posting">【倉庫情報を投稿】</h3>
       <div class="facility">
         <%= f.label :倉庫名：, {class: "facility-name"} %>
-        <%= f.text_field :warehouse_name, :size=>"45", placeholder:" 倉庫名を入力(必須)",autofocus: true %>
+        <%= f.text_field :warehouse_name, :size=>"45", placeholder: " 倉庫名を入力(必須)",autofocus: true %>
       </div>
       <div>
         <%= f.label :投稿日：, {class: "post_day"} %>
@@ -12,7 +12,7 @@
       </div>
       <div class="new-address">
         <%= f.label :所在地：, {class: "address-word"} %>
-        <%= f.text_field :address, :size=>"45", placeholder:" 所在地を入力(必須)" %>
+        <%= f.text_field :address, :size=>"45", placeholder: " 所在地を入力(必須)" %>
       </div>
       <div>
         <%= f.submit "送信", :class=>"btn_post", data: { confirm: "投稿しますか?"} %>

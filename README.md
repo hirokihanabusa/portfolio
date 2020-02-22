@@ -1,28 +1,15 @@
-## Name
-Warehouse Review
+## ポートフォリオ概要
+倉庫の口コミを読むことができます。
+ログインすると倉庫情報の投稿、コメントを書くことができます。
+前職が物流業界で、倉庫各社とやりとりする機会が多かったのですが、
+倉庫の口コミのようなアプリがあれば情報がわかり、倉庫に行く運転手が
+口コミアプリを使って事前に倉庫情報がわかれば良いなと思い開発しました。
+[倉庫口コミ集](https://gyazo.com/8d8850cc6e06f6d42bf5cca9ebb6c609)
 
-## Description
-This app can read reviews. You can write a review if you log in.
+## URL
+http://54.168.214.195
 
-## Demo
-You can know the reputation of the warehouse.
-
-[Warehouse Review](https://gyazo.com/8d8850cc6e06f6d42bf5cca9ebb6c609)
-
-## Requirement
-- Rails 5.2.4.1
-- ruby 2.3.1
-
-## Technology selection for front and back
-- front
-    - HTML, CSS
-- back
-    - Ruby, Ruby on Rails  
-
-## Functions implemented
-Login, Search, Edit, Delete, Mypage, Update, Postlist,PostCreate
-
-## Login user ID and password and Nickname
+## テストアカウント
 - Login user ID
     - 1004user@gmail.com
 - password
@@ -30,12 +17,34 @@ Login, Search, Edit, Delete, Mypage, Update, Postlist,PostCreate
 - Nickname
     - user
 
-## Usage
-```bash
-git clone https://github.com/hirokihanabusa/portfolio.git
-cd portfolio
-rails s
-```
+## 開発環境
+- Rails 5.2.4.1
+- ruby 2.3.1
+- HTML, CSS, Ruby, Ruby on Rails, MySQL, GitHub, AWS
 
-## Author
+## 開発期間
+約2週間
+
+## 1日あたりの平均作業時間
+8〜10時間/日
+
+## 動作確認方法
+- Chromeの最新版を利用してアクセスしてください
+    - ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続ください
+- 接続先およびログイン情報については、上記の通りです。
+- 確認後、ログアウト処理をお願いします
+
+## 実装機能
+ログイン機能, 投稿一覧機能, 投稿機能, 投稿編集機能, 投稿削除機能, 投稿更新機能, 検索機能, Mypage機能, コメント投稿機能, コメント削除機能
+
+## 工夫した点
+コードが冗長にならずかつ処理スピードが早くなるようにリファクタリングしました。
+例えば、部分テンプレートを呼び出す際はlocalsは使わずにcollectionを使い、かつそれを省略して処理スピードが早くなるようにしました。
+
+## 苦労した点
+コメント削除機能の実装方法を調べるためにあらゆるサイトを検索しましたが、実装方法が書いてあるサイトがなかなか見つからず調べるのに丸1日
+かかってしまったことです。そこでただやみくもに検索するだけでなく、例えば英語だけでの検索、マイナス検索、1次ソースを積極的に検索するようにしました。
+エンジニアには検索力も必要だと身をもって実感しました。
+
+## 著者
 [hirokihanabusa](https://github.com/hirokihanabusa)

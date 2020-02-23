@@ -6,4 +6,6 @@ class Post < ApplicationRecord
   validates :post_date, presence: true
   validates :address, presence: true
 
+  mount_uploader :image, ImageUploader
+
 end

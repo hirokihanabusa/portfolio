@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(warehouse_name: post_params[:warehouse_name], post_date: post_params[:post_date], address: post_params[:address], user_id: current_user.id)
+    @post = Post.create(warehouse_name: post_params[:warehouse_name], post_date: post_params[:post_date], address: post_params[:address], image: post_params[:image], user_id: current_user.id)
     redirect_to action: :new unless @post.save
   end
 
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:warehouse_name, :post_date, :address)
+    params.require(:post).permit(:warehouse_name, :post_date, :address, :image)
   end
 
   def move_to_index

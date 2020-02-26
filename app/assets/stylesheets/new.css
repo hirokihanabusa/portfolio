@@ -18,6 +18,15 @@
   margin-left: 12px;
 }
 
+.post-image {
+  padding-top: 22px;
+  margin-left: 12px;
+}
+
+.image {
+  font-size: 18px;
+}
+
 .address-word {
   font-size: 18px;
 }

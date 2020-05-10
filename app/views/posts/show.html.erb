@@ -23,9 +23,9 @@
   </div>
   <div class="container"> 
     <% if current_user %>
-      <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: :comment) do %>
-        <textarea cols="45" name="text" placeholder="コメントする" rows="3" autofocus="true" class="comment-form"></textarea>
-        <%= button_to "送信", {controller: 'posts', action: 'show'}, { method: :get, class: "btn_mouth" } %>
+      <%= form_tag("/posts/#{@post.id}/comments", method: :post, class: :comment, id: :comment) do %>
+        <textarea cols="45" name="text" placeholder="コメントする" rows="3" autofocus="true" id="comment-form"></textarea>
+        <%= button_to "送信", {controller: 'posts', action: 'show'}, { method: :get, id: "btn_mouth" } %>
       <% end %>
     <% end %>
     <div class="comments">
